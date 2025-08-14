@@ -8,6 +8,11 @@ from email.message import EmailMessage
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
 # ---------- AMADEUS API ----------
 AMADEUS_CLIENT_ID = "fpWYOXcCGewozi7G4CErelHzHA9fvIo0"
 AMADEUS_CLIENT_SECRET = "PLg21oAcujKxzyGw"
