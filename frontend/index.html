@@ -79,9 +79,10 @@
             const email = document.getElementById('email').value;
 
             try {
-                const res = await fetch(`/check-price?origin=${origin}&destination=${destination}&date=${date}&targetPrice=${targetPrice}&email=${email}`);
+                const res = await fetch('const res = await fetch(
+    `http://127.0.0.1:5000/check-price?origin=${'encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&date=${encodeURIComponent(date)}&targetPrice=${encodeURIComponent(targetPrice)}&email=${encodeURIComponent(email)}`);
 
-    
+                
 
 
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
