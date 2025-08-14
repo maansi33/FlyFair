@@ -79,8 +79,9 @@
             const email = document.getElementById('email').value;
 
             try {
-                const res = await fetch('https://upset-planes-draw.loca.lt/check-price?origin=DEL&destination=KTM&date=2025-08-15&targetPrice=100&email=example@gmail.com')
-                ;
+                const res = await fetch(`/check-price?origin=${origin}&destination=${destination}&date=${date}&targetPrice=${targetPrice}&email=${email}`);
+
+    
 
 
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
